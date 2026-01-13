@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+.makeawish-page {
+  min-height: 100vh;
+  background: #2f2c33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  color: #ffd6a5;
+  font-family: "Patricks Hand", cursive;
+}
+
+.content {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT TEXT */
+.text-area h1 {
+  font-size: 5rem;
+  color: #ffb703;
+  text-shadow: 0 0 12px rgba(255, 183, 3, 0.5);
+  margin-bottom: 20px;
+}
+
+.instruction {
+  font-size: 3rem;
+  margin: 8px 0;
+}
+
+.instruction.subtle {
+  opacity: 0.85;
+}
+
+.love-text {
+  margin-top: 25px;
+  font-size: 2.5rem;
+  color: #ffafcc;
+  text-shadow: 0 0 10px rgba(255, 175, 204, 0.4);
+}
+
+/* CAKE */
+.cake-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cake {
+  width: 400px;
+  image-rendering: pixelated;
+  transition: transform 0.3s ease;
+}
+
+.cake.clickable {
+  cursor: pointer;
+}
+
+.cake.clickable:hover {
+  transform: scale(1.05);
+}
+
+/* CONFETTI */
+.confetti::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#ffb703 2px, transparent 2px),
+    radial-gradient(#ffafcc 2px, transparent 2px),
+    radial-gradient(#ffd6a5 2px, transparent 2px);
+  background-size: 40px 40px;
+  animation: fall 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  from {
+    background-position: 0 -200px;
+  }
+  to {
+    background-position: 0 100vh;
+  }
+}
+
+/* ARROW */
+.arrow {
+  position: absolute;
+  bottom: 30px;
+  font-size: 2.5rem;
+  color: #ffb703;
+  animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}

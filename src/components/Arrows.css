@@ -1,0 +1,43 @@
+.arrows-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DEFAULT (for other pages if needed) */
+.arrows-wrapper.default .arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* 💖 MAKE-A-WISH VARIANT */
+.arrows-wrapper.romantic {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+.arrows-wrapper.romantic .arrow-btn {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #ffb703;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.6);
+  animation: bounce 1.4s infinite;
+}
+
+.arrows-wrapper.romantic .arrow-btn:disabled {
+  opacity: 0.3;
+  animation: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
