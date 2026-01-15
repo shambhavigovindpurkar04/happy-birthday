@@ -6,7 +6,7 @@
   "homepage": "https://shambhavigovindpurkar04.github.io/happy-birthday",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npx vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
